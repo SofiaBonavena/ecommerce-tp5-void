@@ -21,7 +21,6 @@ const Home = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <p>Las mejores marcas!</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -32,7 +31,6 @@ const Home = () => {
           />
 
           <Carousel.Caption>
-            <Link to={`/shop`}>Shop</Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -43,7 +41,6 @@ const Home = () => {
           />
 
           <Carousel.Caption>
-            <p>Envío gratis!</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

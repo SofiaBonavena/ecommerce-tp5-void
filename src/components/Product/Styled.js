@@ -37,9 +37,9 @@ button {
   outline: none;
 }
 .custom-btn {
-  width: 130px;
-  height: 40px;
-  padding: 0px 25px;
+  width: 30%;
+  height: 100%;
+  padding: 5px 0px;
   border: 2px solid #000;
   font-family: 'Thasadith',sans-serif;
   font-weight: 700;

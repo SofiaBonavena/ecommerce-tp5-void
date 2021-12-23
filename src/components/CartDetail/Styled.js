@@ -19,6 +19,10 @@ const Container = styled.div`
   }
   .buttonremove{
     text-decoration: none;
+    -webkit-text-decoration:none;
+    outline: none;
+    background: transparent;
+    border: transparent;
   }
   .totaltext {
     width:25rem;
@@ -60,6 +64,7 @@ const Container = styled.div`
   .btn-15 {
     background: red;
     color: #fff;
+    margin: 5% auto;
   }
   .btn-15:after {
     position: absolute;
