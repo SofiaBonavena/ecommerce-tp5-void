@@ -29,19 +29,13 @@ const Footer = () => {
                                 <b>CONTACTO</b>
                             </Box>
                             <Box p={0.5}>
-                                <Link to='' color="white">
-                                    Instagram
-                                </Link>
+                                <a href="https://www.instagram.com" target="_blank" rel="noopenernoreferrer">Instagram</a>
                             </Box>
                             <Box p={0.5}>
-                                <Link to='' color="white">
-                                    Facebook
-                                </Link>
+                                <a href="https://www.facebook.com" target="_blank" rel="noopenernoreferrer">Facebook</a>
                             </Box>
                             <Box p={0.5}>
-                                <Link to='' color="white">
-                                    WhatsApp
-                                </Link>
+                                <a href="https://web.whatsapp.com" target="_blank" rel="noopenernoreferrer">WhatsApp</a>
                             </Box>
                         </Grid>
                     </Grid>
