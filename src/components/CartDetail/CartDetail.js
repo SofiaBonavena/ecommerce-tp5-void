@@ -26,7 +26,7 @@ const CartDetail = ({ cart, getCartTotal, cartTotalItems, resetCart, removeItem 
         <p class="totaltext"> No hay productos</p>
         <Link to="/shop">
         <button className="custom-btn btn-16">
-            Seguir comprando
+            Volver al shop
           </button>
         </Link>
       </>
