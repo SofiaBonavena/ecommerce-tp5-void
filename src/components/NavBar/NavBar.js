@@ -1,12 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Container } from "./styled";
 import { Link } from "react-router-dom";
 import { getFirestore } from "../../services/firebase";
 import logo from '../../logo.png';
+import { CartContext } from "../../Contexts/CartContext";
+
 
 const Navbar = () => {
-  const [categories, setCategories] = useState({});
+  const { cartTotalItems } = useContext(CartContext);
+  const [categories, setCategories] = useState([]); 
   const [loading, setLoading] = useState(true);
+
+  console.log(cartTotalItems)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,14 +41,14 @@ const Navbar = () => {
         <ul>
           <li>
             <div className="logo">
-              <a className="navbar-item" href="#">
+              <Link className="navbar-item" to="/">
                 <img
                   alt="logo"
                   src={logo}
                   width="10%"
                   height="10%"
                 />
-              </a>
+              </Link>
             </div>
           </li>
           <li>
@@ -58,9 +63,13 @@ const Navbar = () => {
                 <Link to={`/category/${catId}`}>{name}</Link>
               </li>
             ))}
+          
+          { cartTotalItems() > 0 && 
           <li>
             <Link to={`/checkout`}><img  width="25" src="https://www.pngkey.com/png/full/231-2317482_white-shopping-cart-png-download-buy-icon-white.png"/></Link>
           </li>
+          }
+
         </ul>
       </nav>
     </Container>

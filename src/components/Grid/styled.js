@@ -8,6 +8,7 @@ const GridContainer = styled.div`
 `
 
 const ColContainer = styled.div`
+    background-color:white; 
     grid-column: span ${props => props.desktop || 12};
     @media (max-width: 768px) {
         grid-column: span ${props => props.tablet || '12'};

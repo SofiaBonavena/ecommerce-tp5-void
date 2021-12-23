@@ -17,34 +17,101 @@ const Container = styled.div`
     text-align:center;
     justify-content: center;
   }
-
-  /* .listtext {
-    margin: 0;
-    padding: 0;
-    color:red;
-    font-family: 'Thasadith',sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-  } */
-
-
+  .buttonremove{
+    text-decoration: none;
+  }
   .totaltext {
+    width:25rem;
     font-family: 'Thasadith',sans-serif;
     background-color: #d6d6d6;
     font-weight: 800;
     font-size: 30px;
-    position: relative;
-  top: 70%;
-  transform: translateY(-100%);
+    position: absolute;
+    top: 70%;
+    transform: translateY(-100%);
   }
 
-  button {
-    margin-right: 10%;
-    padding:0;
-    padding: 0;
-    border: none;
-    background: none;
+
+
+  /* button*/
+
+  .frame {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
     justify-content: center;
+  }
+
+  .custom-btn {
+    width: 200px;
+    height: 40px;
+    padding: 0px 25px;
+    border: 2px solid #000;
+    font-family: 'Thasadith',sans-serif;
+    font-weight: 700;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+  }
+
+  /* 15 */
+  .btn-15 {
+    background: red;
+    color: #fff;
+  }
+  .btn-15:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    background: #e0e5ec;
+    transition: all 0.3s ease;
+  }
+  .btn-15:hover {
+    color: #000;
+  }
+  .btn-15:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  .btn-15:active {
+    top: 2px;
+  }
+  /* 16 */
+  .btn-16 {
+    background: #000;
+    color: #fff;
+    z-index: 1;
+  }
+  .btn-16:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    background: #e0e5ec;
+    transition: all 0.3s ease;
+  }
+  .btn-16:hover {
+    color: #000;
+  }
+  .btn-16:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  .btn-16:active {
+    top: 2px;
   }
 
 margin: 8%;

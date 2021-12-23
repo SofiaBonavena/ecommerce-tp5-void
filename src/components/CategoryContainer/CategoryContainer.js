@@ -4,6 +4,7 @@ import { Container } from './Styled'
 import ProductCard from '../ProductCard/ProductCard'
 import { getFirestore } from '../../services/firebase'
 import { Spinner } from 'react-bootstrap'
+import { H2 } from '../Common/Common'
 
 const CategoryContainer = ({ catId }) => {
     //Aca vamos a incluir nuestra logica de fetch a firebase
@@ -39,13 +40,16 @@ const CategoryContainer = ({ catId }) => {
                 <span className="visually-hidden">Loading...</span>
               </Spinner>
             ) : (
-                <Grid rowGap={30} colGap={30}>
-                    {products.map(({ name, image, description, id }, index) =>
-                        <Col desktop={3} tablet={6} mobile={12} key={index}>
-                            <ProductCard name={name} image={image} description={description} id={id} />
-                        </Col>
-                    )}
-                </Grid>
+                <>
+                    <H2>PRODUCTOS</H2>
+                    <Grid rowGap={30} colGap={30}>
+                        {products.map(({ name, image, description, id }, index) =>
+                            <Col desktop={3} tablet={6} mobile={12} key={index}>
+                                <ProductCard name={name} image={image} description={description} id={id} />
+                            </Col>
+                        )}
+                    </Grid>
+                </>
             )}
 
         </Container>

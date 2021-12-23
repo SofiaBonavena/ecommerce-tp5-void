@@ -41,6 +41,7 @@ const CartProvider = ({ defaultValue = [], children }) => {
       .reduce((total, current) => total + current.price * current.quantity, 0)
       .toFixed(2);
 
+
   return (
     <CartContext.Provider
       value={{

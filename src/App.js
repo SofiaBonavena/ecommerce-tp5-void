@@ -7,6 +7,7 @@ import Category from "./pages/Category.js";
 import Product from "./pages/Product.js";
 import Checkout from "./pages/Checkout.js";
 import { CartProvider } from "./Contexts/CartContext.js";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             </Route>
             <Route path="*">NOT FOUND</Route>
           </Switch>
+            <Footer/>
         </CartProvider>
       </Router>
     </div>

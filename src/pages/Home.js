@@ -1,7 +1,10 @@
 import React, { useContext } from "react";
-import { H1, H2, Link } from "../components/Common/Common";
+import { Link } from "../components/Common/Common";
 import { CartContext } from "../Contexts/CartContext";
 import { Carousel } from "react-bootstrap";
+import Novedades from "../components/Novedades/Novedades";
+import Newsletter from "../components/Newsletter/Newsletter";
+import Payments from "../components/Payments/Payments";
 
 const Home = () => {
   const { cart, cartTotalItems } = useContext(CartContext);
@@ -10,11 +13,6 @@ const Home = () => {
 
   return (
     <div>
-      {/* <H1>Home {cartTotalItems()}</H1> */}
-      {/* <H2>New Arrivals</H2> */}
-      {/* <Link url={`https://google.com`} target={false}>
-        Click Me Alicia
-      </Link> */}
       <Carousel>
         <Carousel.Item>
           <img
@@ -23,7 +21,7 @@ const Home = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <p>Best brands and arrivals!</p>
+            <p>Las mejores marcas!</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -45,10 +43,13 @@ const Home = () => {
           />
 
           <Carousel.Caption>
-            <p>Free shipping</p>
+            <p>Envío gratis!</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      <Novedades/>
+      <Newsletter/>
+      <Payments/>
     </div>
   );
 };

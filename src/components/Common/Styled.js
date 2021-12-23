@@ -5,8 +5,12 @@ const StyledH1 = styled.h1`
   color: #f00;
 `;
 const StyledH2 = styled.h2`
-  font-size: 100px;
-  color: #00f;
+  font-size: 3rem;
+  color: black;
+  font-family: 'Thasadith', sans-serif;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-weight: bold;
 `;
 
 const StyledLink = styled.a`

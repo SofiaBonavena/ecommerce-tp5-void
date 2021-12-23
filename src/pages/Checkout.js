@@ -1,13 +1,14 @@
 import React, { useState, useContext } from "react";
 import { Grid, Col } from "../components/Grid";
-import { H2, Inner } from "../components/Common/Common";
+import { Inner } from "../components/Common/Common";
 import CheckoutForm from "../components/CheckoutForm/CheckoutForm";
 import { CartContext } from "../Contexts/CartContext";
 import CartDetail from "../components/CartDetail/CartDetail";
 import { getFirestore, getDate } from "../services/firebase";
+import OrderCreated from "../components/OrderCreated/OrderCreated";
 
 const Checkout = () => {
-  const { cart, getCartTotal, setCart, resetCart, removeItem } = useContext(CartContext);
+  const { cart, getCartTotal, cartTotalItems, setCart, resetCart, removeItem } = useContext(CartContext);
   const [orderCreated, setOrderCreated] = useState(false);
 
   console.log(cart);
@@ -44,22 +45,24 @@ const Checkout = () => {
       console.log(error);
     }
   };
-  return (
+  return ( 
+    /* Cuando mandas submit en el formulario se setea a verdadero. 
+    Cuando es verdadero aparece el H2 y cuando no es verdadero 
+    renderiza el formulario y el cartdetail  */
     <Inner>
-      {orderCreated ? (
-        <H2>Checkout {`Order N ${orderCreated}`}</H2>
+      {orderCreated ? ( 
+        <OrderCreated orderCreated={orderCreated}/>
       ) : (
-        <H2></H2>
+        <Grid>
+          <Col desktop={6} tablet={6} mobile={12}>
+            <CheckoutForm handleSubmit={placeOrder} />
+          </Col>
+          <Col desktop={6} tablet={6} mobile={12}>
+            <CartDetail cart={cart} resetCart={resetCart} getCartTotal={getCartTotal} removeItem={removeItem} cartTotalItems={cartTotalItems} />
+          </Col>
+        </Grid>
       )}
 
-      <Grid>
-        <Col desktop={6} tablet={6} mobile={12}>
-          <CheckoutForm handleSubmit={placeOrder} />
-        </Col>
-        <Col desktop={6} tablet={6} mobile={12}>
-          <CartDetail cart={cart} resetCart={resetCart} getCartTotal={getCartTotal} removeItem={removeItem} />
-        </Col>
-      </Grid>
     </Inner>
   );
 };
