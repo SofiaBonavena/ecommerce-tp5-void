@@ -8,18 +8,11 @@ import { getFirestore, getDate } from "../services/firebase";
 import OrderCreated from "../components/OrderCreated/OrderCreated";
 
 const Checkout = () => {
-  const { cart, getCartTotal, cartTotalItems, setCart, resetCart, removeItem } = useContext(CartContext);
+  const { cart, getCartTotal, cartTotalItems, setCart, resetCart, removeItem, addToCart } = useContext(CartContext);
   const [orderCreated, setOrderCreated] = useState(false);
 
-  console.log(cart);
 
   const placeOrder = async (buyerData) => {
-    //Vamos a preparar el pedido
-    //1-tenemos los datos del usuario (values)
-
-    //2-tenemos el estado del carrito
-
-    //3-Escribimos la orden en fireba
 
     try {
       const db = getFirestore();
@@ -46,19 +39,16 @@ const Checkout = () => {
     }
   };
   return ( 
-    /* Cuando mandas submit en el formulario se setea a verdadero. 
-    Cuando es verdadero aparece el H2 y cuando no es verdadero 
-    renderiza el formulario y el cartdetail  */
     <Inner>
       {orderCreated ? ( 
         <OrderCreated orderCreated={orderCreated}/>
       ) : (
         <Grid>
           <Col desktop={6} tablet={6} mobile={12}>
-            <CheckoutForm handleSubmit={placeOrder} />
+            <CheckoutForm handleSubmit={placeOrder} cartTotalItems={cartTotalItems} />
           </Col>
           <Col desktop={6} tablet={6} mobile={12}>
-            <CartDetail cart={cart} resetCart={resetCart} getCartTotal={getCartTotal} removeItem={removeItem} cartTotalItems={cartTotalItems} />
+            <CartDetail cart={cart} resetCart={resetCart} getCartTotal={getCartTotal} removeItem={removeItem} cartTotalItems={cartTotalItems} editCart={addToCart}/>
           </Col>
         </Grid>
       )}

@@ -16,7 +16,7 @@ const Container = styled.div`
     /* Field*/
     .field {
         padding-left:2rem;
-        width: 40rem;
+        width: 40%;
         height: 2.5rem;
     }
 
@@ -36,7 +36,6 @@ const Container = styled.div`
     .custom-btn {
     width: 130px;
     height: 40px;
-    padding: 0px 10px;
     border: 2px solid #000;
     font-family: 'Thasadith',sans-serif;
     font-weight: 700;

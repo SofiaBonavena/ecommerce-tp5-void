@@ -13,7 +13,6 @@ transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
 img{ width: 100%; min-height: 200px;}
 
-/* button*/
 
 a {
     p {
@@ -48,7 +47,6 @@ button {
   display: inline-block;
 }
 
-/* 16 */
 .btn-16 {
    background: #000;
   color: #fff;

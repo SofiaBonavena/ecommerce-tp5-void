@@ -36,3 +36,72 @@
     transform: rotate(360deg);
   }
 }
+
+.carouseltext {
+  color: white;
+  font-size: 80px;
+  font-family: 'Staatliches', sans-serif;
+  text-align: left;
+  margin-left: 4rem;
+}
+
+.calltoaction {
+  width: 150px;
+  text-decoration: none;
+  font-family: 'Thasadith', sans-serif;
+  margin-bottom: 17rem;
+  text-align: left;
+  margin-left: 4rem;
+}
+
+.calltoaction button {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: white;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+}
+
+.custom-btn {
+  width: 30%;
+  height: 100%;
+  padding: 5px 0px;
+  border: 2px solid #000;
+  font-family: 'Thasadith',sans-serif;
+  font-weight: 700;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-16 {
+   background: #000;
+  color: black;
+  z-index: 1;
+}
+.btn-16:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: #999da3;
+  transition: all 0.3s ease;
+}
+.btn-16:hover {
+  color: #000;
+}
+.btn-16:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.btn-16:active {
+  top: 2px;
+}

@@ -14,7 +14,7 @@ const Product = () => {
 
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(false);
-  const successAlert = (product) => { // Alert
+  const successAlert = (product) => { 
     Swal.fire({
       position: "center",
       icon: "success",
@@ -52,8 +52,6 @@ const Product = () => {
 
     fetchData();
   }, [prodId]);
-
-  //Aca vamos a consultarle a firebase los datos de este producto usando el prodId
 
   return (
     <div>

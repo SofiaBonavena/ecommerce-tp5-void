@@ -11,6 +11,7 @@ const Container = styled.div`
     align-items: center;
     font-size: 17px ;
     font-family: 'Thasadith', sans-serif;
+    margin-top:10vh;
     a{
         color:white;
         text-decoration: none;

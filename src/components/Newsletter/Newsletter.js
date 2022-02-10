@@ -4,7 +4,6 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Container } from './styled';
 import { H2 } from '../Common/Common'
 
-// Alert: Te has suscrito con exito
 const Newsletter = () => {
     const successAlert = (mail) => {
         Swal.fire({
@@ -19,7 +18,6 @@ const Newsletter = () => {
 
     const [suscrito, setSuscrito] = useState(false)
 
-    // Formulario newsletter
     return (
         <div>
             {!suscrito && 
@@ -48,12 +46,12 @@ const Newsletter = () => {
                         <Container>
                             <H2>NEWSLETTER</H2>
                             <Form id="my-form">
-                                <p class="contact">Recibí promociones y novedades en tu mail</p>
-                                <Field class="field" placeholder="Ingresá tu mail" type="email" name="email" />
-                                <button class="custom-btn btn-16" type="submit" disabled={isSubmitting}>
+                                <p className="contact">Recibí promociones y novedades en tu mail</p>
+                                <Field className="field" placeholder="Ingresá tu mail" type="email" name="email" />
+                                <button className="custom-btn btn-16" type="submit" disabled={isSubmitting}>
                                     SUSCRIBIRME  
                                 </button>
-                                <ErrorMessage class="error" name="email" component="span" />
+                                <ErrorMessage className="error" name="email" component="span" />
                                 
                             </Form>
                         </Container>

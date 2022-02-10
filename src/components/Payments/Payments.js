@@ -15,7 +15,9 @@ const metodos = [
     "pagofacil.png",
     "paypal.png",
     "maestro.png",
-    "cabaldebito.png"
+    "cabaldebito.png",
+    "wise.png",
+    "uala.png"
 ]
 
     return (
@@ -24,11 +26,12 @@ const metodos = [
                 <H2>FORMAS DE PAGO</H2>
                 <Grid rowGap={30} colGap={30}>
                     {metodos.map((m, index) =>
-                        <Col desktop={1} tablet={6} mobile={12} key={index}>
+                        <Col desktop={2} tablet={6} mobile={12} key={index}>
                             <img src={`${process.env.PUBLIC_URL}/assets/image/${m}`} width={100} alt=""/>
                         </Col>
                     )}
                 </Grid>
+                
             </Container>
         </div>
     )

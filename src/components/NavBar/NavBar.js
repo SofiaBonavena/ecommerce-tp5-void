@@ -4,14 +4,13 @@ import { Link } from "react-router-dom";
 import { getFirestore } from "../../services/firebase";
 import logo from '../../logo.png';
 import { CartContext } from "../../Contexts/CartContext";
+import  DropdownMenu  from "../DropdownMenu/DropdownMenu";
 
 
 const Navbar = () => {
   const { cartTotalItems } = useContext(CartContext);
   const [categories, setCategories] = useState([]); 
   const [loading, setLoading] = useState(true);
-
-  console.log(cartTotalItems)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -57,16 +56,12 @@ const Navbar = () => {
           <li>
             <Link to={`/shop`}>Shop</Link>
           </li>
-          {!loading &&
-            categories.map(({ catId, name }) => (
-              <li>
-                <Link to={`/category/${catId}`}>{name}</Link>
-              </li>
-            ))}
+          {!loading && <DropdownMenu categories={categories} />
+          }
           
           { cartTotalItems() > 0 && 
           <li>
-            <Link to={`/checkout`}><img  width="25" src="https://www.pngkey.com/png/full/231-2317482_white-shopping-cart-png-download-buy-icon-white.png"/></Link>
+            <Link to={`/checkout`}><img  width="25" src="https://www.pngkey.com/png/full/231-2317482_white-shopping-cart-png-download-buy-icon-white.png" alt="carticon"/></Link>
           </li>
           }
 

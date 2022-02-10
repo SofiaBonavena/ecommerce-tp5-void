@@ -8,9 +8,9 @@ const ProductCard = ({ name, image, description, id }) => {
             <img src={`${process.env.PUBLIC_URL}/assets/image/${image}`} alt={name} />
             <h3>{name}</h3>
             <p>{description}</p>
-            <div class="frame" />
+            <div className="frame" />
             <Link to={`/product/${id}`}>
-                <button class="custom-btn btn-16">+ info</button>
+                <button className="custom-btn btn-16">+ INFO</button>
             </Link>
         </Container>
     )

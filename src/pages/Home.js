@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
-import { Link } from "../components/Common/Common";
 import { CartContext } from "../Contexts/CartContext";
 import { Carousel } from "react-bootstrap";
 import Novedades from "../components/Novedades/Novedades";
 import Newsletter from "../components/Newsletter/Newsletter";
 import Payments from "../components/Payments/Payments";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  const { cart, cartTotalItems } = useContext(CartContext);
+  const { cart } = useContext(CartContext);
 
   console.log("from home", cart);
 
@@ -15,38 +15,49 @@ const Home = () => {
     <div>
       <Carousel>
         <Carousel.Item>
+          <Carousel.Caption>
+            <div>
+              <h3 className='carouseltext'> LAS MEJORES <br></br>MARCAS</h3>
+              <div className='calltoaction'><Link to='/shop'><button className="custom-btn btn-16"> IR AL SHOP</button></Link></div>
+            </div>
+          </Carousel.Caption>
           <img
             className="d-block w-100 h-100"
-            src="../../assets/image/hero3.jpg"
+            src="../../assets/image/hero1.jpg"
             alt="First slide"
           />
-          <Carousel.Caption>
-          </Carousel.Caption>
+
         </Carousel.Item>
         <Carousel.Item>
+          <Carousel.Caption>
+            <div>
+              <h3 className='carouseltext'>LOS MEJORES <br></br>PRECIOS</h3>
+              <div className='calltoaction'><Link to='/shop'><button className="custom-btn btn-16"> IR AL SHOP</button></Link></div>
+            </div>
+          </Carousel.Caption>
           <img
             className="d-block w-100"
             src="../../assets/image/hero2.jpg"
             alt="Second slide"
           />
-
-          <Carousel.Caption>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
+          <Carousel.Caption>
+            <div>
+              <h3 className='carouseltext'>LA MAYOR <br></br>DURABILIDAD</h3>
+              <div className='calltoaction'><Link to='/shop'><button className="custom-btn btn-16"> IR AL SHOP</button></Link></div>
+            </div>
+          </Carousel.Caption>
           <img
             className="d-block w-100"
-            src="../../assets/image/hero1.jpg"
+            src="../../assets/image/hero3.jpg"
             alt="Third slide"
           />
-
-          <Carousel.Caption>
-          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      <Novedades/>
-      <Newsletter/>
-      <Payments/>
+      <Novedades />
+      <Newsletter />
+      <Payments />
     </div>
   );
 };

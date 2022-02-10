@@ -10,8 +10,6 @@ const Container = styled.div`
             color: #37A936;
         }
 
-        /* button*/
-
         .frame {
         width: 90%;
         text-align: center;

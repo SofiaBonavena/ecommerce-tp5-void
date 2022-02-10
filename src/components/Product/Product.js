@@ -17,16 +17,13 @@ const Product = ({ prodId, product, addToCart }) => {
                         <p className="textodesc">{product.desc}</p>
                         <p className="textoprecio">${product.price}</p>
                         <div className="frame" />
-                        <button className="custom-btn btn-16" onClick={() => addToCart({ ...product, quantity: 1 })}> Add to cart</button>
+                        <button className="custom-btn btn-16" onClick={() => addToCart({ ...product, quantity: 1 })}> AÑADIR AL CARRITO</button>
                     </div>
                 </Col>
             </Grid>
         </Container>
     )
 }
-
-
-
 
 
 export default Product

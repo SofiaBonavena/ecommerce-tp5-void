@@ -25,7 +25,6 @@ const Container = styled.div`
     display: inline-block;
     }
 
-    /* 16 */
     .btn-16 {
     background: #000;
     color: #fff;

@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Container } from './styled';
 import { H2 } from '../Common/Common'
 
-const CheckoutForm = ({ handleSubmit }) => (
+const CheckoutForm = ({ handleSubmit, cartTotalItems }) => (
   <Formik
     initialValues={{ email: "", name: "", phone: "" }}
     validate={(values) => {
@@ -32,19 +32,26 @@ const CheckoutForm = ({ handleSubmit }) => (
   >
     {({ isSubmitting }) => (
       <Container>
-      <Form id="my-form">
-        <H2 class="contact">Detalles de contácto</H2>
-        <Field class="field" placeholder="Nombre" type="text" name="name" />
-        <ErrorMessage class="error" name="name" component="span" />
-        <Field class="field" placeholder="Email" type="email" name="email" />
-        <ErrorMessage class="error" name="email" component="span" />
-        <Field class="field" placeholder="Teléfono" type="text" name="phone" />
-        <ErrorMessage class="error" name="phone" component="span" />
-        <div class="frame" />
-        <button class="custom-btn btn-16" type="submit" disabled={isSubmitting}>
-          COMPRAR
-        </button>
-      </Form>
+        <Form id="my-form">
+          <H2 className="contact">Detalles de contácto</H2>
+          <Field className="field" placeholder="Nombre" type="text" name="name" />
+          <ErrorMessage className="error" name="name" component="span" />
+          <Field className="field" placeholder="Email" type="email" name="email" />
+          <ErrorMessage className="error" name="email" component="span" />
+          <Field className="field" placeholder="Teléfono" type="text" name="phone" />
+          <ErrorMessage className="error" name="phone" component="span" />
+          <div className="frame" />
+          {cartTotalItems() === 0
+            ?
+            <p className="warning"><strong>*IMPORTANTE*</strong> Para completar el formulario <br></br> debes agregar productos al carrito de compras</p>
+            
+            :
+            <button className="custom-btn btn-16" type="submit" disabled={isSubmitting}>
+              COMPRAR
+            </button>
+          }
+
+        </Form>
       </Container>
     )}
   </Formik>

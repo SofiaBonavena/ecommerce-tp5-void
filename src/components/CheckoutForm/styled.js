@@ -5,7 +5,6 @@ max-width: 1200px;
 margin: 50px auto;
 height: 100%;
 
-/* form */
 .contact {
   font-family: 'Thasadith',sans-serif;
   font-size: 30px;
@@ -35,13 +34,9 @@ height: 100%;
   font-weight: 400px;
   color: black;
   padding: 10px;
-  margin: 20px;
+  margin: 10px;
 }
 
-
-
-
-/* button*/
 
 .frame {
   width: 90%;
@@ -94,6 +89,18 @@ button {
 }
 .btn-16:active {
   top: 2px;
+}
+
+.warningbox {
+  border-color: black;
+}
+
+.warning {
+  color: red;
+  font-size: 20px;
+  border: 3px solid red;
+  padding: 20px;
+  margin: 10px;
 }
 
 `

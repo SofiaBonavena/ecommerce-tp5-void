@@ -7,7 +7,6 @@ import { Spinner } from 'react-bootstrap'
 import { H2 } from '../Common/Common'
 
 const CategoryContainer = ({ catId }) => {
-    //Aca vamos a incluir nuestra logica de fetch a firebase
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(() => {

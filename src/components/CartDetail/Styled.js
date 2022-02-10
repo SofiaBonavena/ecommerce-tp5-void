@@ -5,6 +5,9 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    margin: 0rem;
   }
   
   .carttitle {
@@ -25,19 +28,11 @@ const Container = styled.div`
     border: transparent;
   }
   .totaltext {
-    width:25rem;
     font-family: 'Thasadith',sans-serif;
     background-color: #d6d6d6;
     font-weight: 800;
     font-size: 30px;
-    position: absolute;
-    top: 70%;
-    transform: translateY(-100%);
   }
-
-
-
-  /* button*/
 
   .frame {
     width: 90%;
@@ -59,8 +54,6 @@ const Container = styled.div`
     position: relative;
     display: inline-block;
   }
-
-  /* 15 */
   .btn-15 {
     background: red;
     color: #fff;
@@ -89,7 +82,7 @@ const Container = styled.div`
   .btn-15:active {
     top: 2px;
   }
-  /* 16 */
+
   .btn-16 {
     background: #000;
     color: #fff;
@@ -119,9 +112,9 @@ const Container = styled.div`
     top: 2px;
   }
 
-margin: 8%;
+margin-top: 8%;
 height: 80%;
-width: 70%;
+width: 100%;
 display:flex;
 flex-direction: column;
 justify-content: right;
