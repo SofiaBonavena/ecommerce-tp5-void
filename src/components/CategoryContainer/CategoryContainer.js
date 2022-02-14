@@ -41,13 +41,16 @@ const CategoryContainer = ({ catId }) => {
             ) : (
                 <>
                     <H2>PRODUCTOS</H2>
-                    <Grid rowGap={30} colGap={30}>
+                    <Container>
+                        <Grid rowGap={30} colGap={30}>
                         {products.map(({ name, image, description, id }, index) =>
                             <Col desktop={3} tablet={6} mobile={12} key={index}>
                                 <ProductCard name={name} image={image} description={description} id={id} />
                             </Col>
                         )}
-                    </Grid>
+                        </Grid>
+                    </Container>
+                    
                 </>
             )}
 

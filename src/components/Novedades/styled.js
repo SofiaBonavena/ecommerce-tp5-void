@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-    margin-left: 5rem;
-    margin-right: 5rem;
     .grid {
      background-color: #D3D3D3 ;
     }      

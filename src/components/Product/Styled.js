@@ -9,7 +9,7 @@ margin: 50px auto;
   margin: 30px;
   font-size: 15px;
   font-family: 'Thasadith', sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   color:black;
   text-align: left;
 }

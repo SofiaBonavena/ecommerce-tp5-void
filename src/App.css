@@ -52,13 +52,24 @@
   }
   .carouseltext2 {
     font-size: 1px;
-    visibility: hidden;
+    display: none;
   }
   .imgdesktop{
     display: block;
   }
   .imgmobile {
     display: none;
+  }
+  .calltoaction {
+    width: 150px;
+    text-decoration: none;
+    font-family: 'Thasadith', sans-serif;
+    text-align: left;
+    margin-left: 4rem;
+  }
+  .calltoaction button {
+    width: 200px;
+    height: 50px;
   }
 }
 
@@ -68,23 +79,34 @@
   }
   .carouseltext2 {
     font-size: 1px;
-    visibility: hidden;
+    display: none;
   }
   .imgdesktop{
     display: block;
   }
   .imgmobile {
     display: none;
+  }
+  .calltoaction {
+    width: 150px;
+    text-decoration: none;
+    font-family: 'Thasadith', sans-serif;
+    text-align: left;
+    margin-left: 4rem;
+  }
+  .calltoaction button {
+    width: 200px;
+    height: 50px;
   }
 }
 
 @media only screen and (max-width: 764px) {
   .carouseltext {
-    visibility:hidden;
+    display: none;
   }
   .carouseltext2 {
     font-size: 35px;
-    visibility: visible;
+    display: block;
   }
   .imgdesktop{
     display: none;
@@ -92,23 +114,35 @@
   .imgmobile {
     display: block;
   }
+
+  .calltoaction {
+    width: 150px;
+    text-decoration: none;
+    font-family: 'Thasadith', sans-serif;
+    text-align: left;
+    margin-left: 4rem;
+  }
+
   .calltoaction button {
+    width: 200px;
+    height: 50px;
     text-align: center;
-    margin-left: 35%;
+    margin-left: 50%;
   }
 }
 
 @media only screen and (max-width: 622px) {
   .carouseltext {
-    visibility:hidden;
+    display: none;
   }
   .carouseltext2 {
     font-size: 25px;
     visibility: visible;
-    text-align: left;
-    margin-left: 10%;
+    text-align: center;
   }
   .calltoaction button {
+    width: 200px;
+    height: 50px;
     text-align: center;
     margin-left: 25%;
   }
@@ -122,17 +156,19 @@
 
 @media only screen and (max-width: 480px) {
   .carouseltext {
-    visibility:hidden;
+    display: none;
   }
   .carouseltext2 {
     font-size: 22px;
     visibility: visible;
-    text-align: left;
-    margin-left: 10%;
-  }
-  .calltoaction button {
     text-align: center;
-    margin-left: 2%;
+  }
+  
+  .calltoaction button {
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    margin-left: auto;
   }
   .imgdesktop{
     display: none;
@@ -142,24 +178,17 @@
   }
 }
 
+
 .textbuttoncar {
   padding-bottom: 20%;
 }
 
-.calltoaction {
-  width: 150px;
-  text-decoration: none;
-  font-family: 'Thasadith', sans-serif;
-  text-align: left;
-  margin-left: 4rem;
-}
+
 
 .calltoaction button {
   font-size: 20px;
   font-weight: 600;
   background-color: white;
-  width: 200px;
-  height: 50px;
   text-align: center;
 }
 
