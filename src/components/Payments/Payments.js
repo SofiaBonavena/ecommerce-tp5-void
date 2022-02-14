@@ -13,21 +13,17 @@ const metodos = [
     "rapipago.png",
     "american.png",
     "pagofacil.png",
-    "paypal.png",
-    "maestro.png",
-    "cabaldebito.png",
-    "wise.png",
-    "uala.png"
+    "uala.png",
 ]
 
     return (
         <div>
             <Container>
                 <H2>FORMAS DE PAGO</H2>
-                <Grid rowGap={30} colGap={30}>
+                <Grid rowGap={30} colGap={20}>
                     {metodos.map((m, index) =>
-                        <Col desktop={2} tablet={6} mobile={12} key={index}>
-                            <img src={`${process.env.PUBLIC_URL}/assets/image/${m}`} width={100} alt=""/>
+                        <Col desktop={3} tablet={6} mobile={12} key={index}>
+                            <img  className="box" src={`${process.env.PUBLIC_URL}/assets/image/${m}`} width={150} alt="mediodepago"/>
                         </Col>
                     )}
                 </Grid>

@@ -37,19 +37,119 @@
   }
 }
 
+
 .carouseltext {
   color: white;
-  font-size: 80px;
+  font-size: 5rem;
   font-family: 'Staatliches', sans-serif;
   text-align: left;
   margin-left: 4rem;
+}
+
+@media only screen and (min-width: 1100px) {
+  .carouseltext {
+    visibility: visible;
+  }
+  .carouseltext2 {
+    font-size: 1px;
+    visibility: hidden;
+  }
+  .imgdesktop{
+    display: block;
+  }
+  .imgmobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .carouseltext {
+    font-size: 3rem;
+  }
+  .carouseltext2 {
+    font-size: 1px;
+    visibility: hidden;
+  }
+  .imgdesktop{
+    display: block;
+  }
+  .imgmobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 764px) {
+  .carouseltext {
+    visibility:hidden;
+  }
+  .carouseltext2 {
+    font-size: 35px;
+    visibility: visible;
+  }
+  .imgdesktop{
+    display: none;
+  }
+  .imgmobile {
+    display: block;
+  }
+  .calltoaction button {
+    text-align: center;
+    margin-left: 35%;
+  }
+}
+
+@media only screen and (max-width: 622px) {
+  .carouseltext {
+    visibility:hidden;
+  }
+  .carouseltext2 {
+    font-size: 25px;
+    visibility: visible;
+    text-align: left;
+    margin-left: 10%;
+  }
+  .calltoaction button {
+    text-align: center;
+    margin-left: 25%;
+  }
+  .imgdesktop{
+    display: none;
+  }
+  .imgmobile {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .carouseltext {
+    visibility:hidden;
+  }
+  .carouseltext2 {
+    font-size: 22px;
+    visibility: visible;
+    text-align: left;
+    margin-left: 10%;
+  }
+  .calltoaction button {
+    text-align: center;
+    margin-left: 2%;
+  }
+  .imgdesktop{
+    display: none;
+  }
+  .imgmobile {
+    display: block;
+  }
+}
+
+.textbuttoncar {
+  padding-bottom: 20%;
 }
 
 .calltoaction {
   width: 150px;
   text-decoration: none;
   font-family: 'Thasadith', sans-serif;
-  margin-bottom: 17rem;
   text-align: left;
   margin-left: 4rem;
 }

@@ -5,8 +5,8 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
     margin: 0rem;
   }
   
@@ -20,6 +20,20 @@ const Container = styled.div`
     text-align:center;
     justify-content: center;
   }
+
+  .editquantity {
+    width: 40px;
+    color: white;
+    background: #000;
+    text-decoration: none;
+    font-family: 'Thasadith',sans-serif;
+    font-weight:700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+  }
+
   .buttonremove{
     text-decoration: none;
     -webkit-text-decoration:none;
