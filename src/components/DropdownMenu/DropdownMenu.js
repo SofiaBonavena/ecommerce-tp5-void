@@ -26,7 +26,7 @@ export default function DropdownMenu({ categories }) {
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
             >
-                Categories
+                Categorias
             </Button>
             </Container>
             <Menu 

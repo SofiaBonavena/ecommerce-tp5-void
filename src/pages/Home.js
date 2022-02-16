@@ -19,7 +19,7 @@ const Home = () => {
               <div className="textbuttoncar">
                 <h3 className='carouseltext'> LAS MEJORES <br></br>MARCAS</h3>
                 <h3 className='carouseltext2'> LAS MEJORES MARCAS</h3>
-                <div className='calltoaction'><Link to='/shop'><button className="custom-btn btn-16"> IR AL SHOP</button></Link></div>
+                <div className='calltoaction'><Link to='/shop'><button className="custom-btn btn-16"> IR A LA TIENDA</button></Link></div>
               </div>
             </Carousel.Caption>
           </div>
@@ -40,7 +40,7 @@ const Home = () => {
           <div className="textbuttoncar">
               <h3 className='carouseltext'>LOS MEJORES <br></br>PRECIOS</h3>
               <h3 className='carouseltext2'> LOS MEJORES PRECIOS</h3>
-              <div className='calltoaction'><Link to='/shop'><button className="custom-btn btn-16"> IR AL SHOP</button></Link></div>
+              <div className='calltoaction'><Link to='/shop'><button className="custom-btn btn-16"> IR A LA TIENDA</button></Link></div>
             </div>
           </Carousel.Caption>
           <img
@@ -59,7 +59,7 @@ const Home = () => {
           <div className="textbuttoncar">
               <h3 className='carouseltext'>LA MAYOR <br></br>DURABILIDAD</h3>
               <h3 className='carouseltext2'> LA MAYOR DURABILIDAD</h3>
-              <div className='calltoaction'><Link to='/shop'><button className="custom-btn btn-16"> IR AL SHOP</button></Link></div>
+              <div className='calltoaction'><Link to='/shop'><button className="custom-btn btn-16"> IR A LA TIENDA</button></Link></div>
             </div>
           </Carousel.Caption>
           <img

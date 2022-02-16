@@ -20,7 +20,7 @@ const Footer = () => {
                             </Box>
                             <Box p={0.5}>
                                 <Link to='/shop' color="white">
-                                    Productos
+                                    Tienda
                                 </Link>
                             </Box>
                         </Grid>

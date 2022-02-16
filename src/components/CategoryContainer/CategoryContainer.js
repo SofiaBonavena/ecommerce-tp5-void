@@ -40,7 +40,11 @@ const CategoryContainer = ({ catId }) => {
               </Spinner>
             ) : (
                 <>
-                    <H2>PRODUCTOS</H2>
+                    { catId === undefined ?
+                    <H2>PRODUCTOS</H2> 
+                    :
+                    <H2>{catId}</H2> 
+                }
                     <Container>
                         <Grid rowGap={30} colGap={30}>
                         {products.map(({ name, image, description, id }, index) =>

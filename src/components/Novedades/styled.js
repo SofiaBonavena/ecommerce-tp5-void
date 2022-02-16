@@ -51,6 +51,10 @@ const Container = styled.div`
     .btn-16:active {
     top: 2px;
     }
+    .novedadescontainer{
+    max-width:1200px;
+    margin: 0 auto
+    }
 `
 
 export { Container }
